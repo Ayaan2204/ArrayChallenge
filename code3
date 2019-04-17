@@ -1,0 +1,49 @@
+ #include <stdio.h>
+#include <conio.h>
+void main()
+{
+    int size;
+    int i;
+    int p;
+    int q;
+    int k=0;
+    
+    printf("ENTER ARRAY SIZE\n");
+    scanf("%d",&size);
+    int a[size];
+    printf("Please enter %d elements\n",size);
+    for(i=0;i<size;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<size;i++)
+    {
+        printf("a[%d] = %d\n",i,a[i]);
+    }
+    
+    
+    printf("Enter input number\n");
+    scanf("%d",&p);
+    while(k==0)
+    {
+        printf("Enter index for %d from 0 to %d\n",p,i-1);
+        scanf("%d",&q);
+        if(q<=size&&q>=0)
+        {
+            k=1;
+        }
+    }
+    k=0;
+    
+    size++;
+    for(i=size-1;i>=q;i--)
+    
+        a[i+1]=a[i];
+    
+    a[q]=p;
+     for(i=0;i<size;i++)
+    {
+        printf("a[%d] = %d\n",i,a[i]);
+    }
+    
+}
